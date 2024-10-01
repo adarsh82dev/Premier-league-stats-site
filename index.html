@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premier League Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #eef0eb;
+    }
+
+    #header {
+      background-color: #000000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #navbar {
+      background-color: #000000;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .nav-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #f24733;
+  color: white;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  width: auto; /* Let the width adjust dynamically based on content */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  display: inline-block; /* Display buttons in a line */
+}
+
+@media (max-width: 768px) {
+  .nav-btn {
+    display: block; /* Change display to block for smaller screens */
+    width: 100%; /* Set width to full width on smaller screens */
+    margin-bottom: 5px; /* Add some margin between buttons on smaller screens */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav-btn {
+    width: calc(50% - 20px); /* Set width to one-half minus margins on smaller screens */
+  }
+}
+
+
+    .nav-btn:hover {
+      background-color: #f24733;
+    }
+
+    #content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    table {
+      width: 60%;
+      margin: 0 auto; /* Centering the table */
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f24733;
+      color: white;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="header">
+      <h1>Premier League Website</h1>
+    </div>
+
+    <div id="navbar">
+      <!-- Anchors added to the buttons -->
+      <button class="nav-btn" onclick="showSection('home')">Home</button>
+      <button class="nav-btn" onclick="showSection('teams')">Teams</button>
+      <button class="nav-btn" onclick="showSection('top')">Top Goal Scorers</button>
+      <button class="nav-btn" onclick="showSection('rat')">Team Ratings</button>
+      <button class="nav-btn" onclick="showSection('most')">Most matches played</button>
+      <button class="nav-btn" onclick="showSection('too')">Top rated players</button>
+      <button class="nav-btn" onclick="showSection('poo')">Points Table</button>
+      <button class="nav-btn" onclick="showSection('top1')">Top rated players
+    in each team</button>
+    </div>
+
+    <!-- Sections for each button -->
+    <div id="home" class="section">
+      <h2>Home Section</h2>
+      <!-- Your home content here -->
+      <p>Welcome to the Premier League Website! Choose a section from the navigation bar above.</p>
+    </div>
+
+    <div id="teams" class="section hidden">
+      <h2>Teams Section</h2>
+      <table>
+        <tr>
+          <th>Team</th>
+        </tr>
+        <tr>
+          <td>Liverpool</td>
+        </tr>
+        <tr>
+          <td>Arsenal</td>
+        </tr>
+        <tr>
+          <td>Aston Villa</td>
+        </tr>
+        <tr>
+          <td>Bournemouth</td>
+        </tr>
+        <tr>
+          <td>Brentford</td>
+        </tr>
+        <tr>
+          <td>Brighton</td>
+        </tr>
+        <tr>
+          <td>Burnley</td>
+        </tr>
+        <tr>
+          <td>Chelsea</td>
+        </tr>
+        <tr>
+          <td>Crystal Palace</td>
+        </tr>
+        <tr>
+          <td>Everton</td>
+        </tr>
+        <tr>
+          <td>Fulham</td>
+        </tr>
+        <tr>
+          <td>Luton Town</td>
+        </tr>
+        <tr>
+          <td>Man City</td>
+        </tr>
+        <tr>
+          <td>Manchester United</td>
+        </tr>
+        <tr>
+          <td>Newcastle</td>
+        </tr>
+        <tr>
+          <td>Forrest</td>
+        </tr>
+        <tr>
+          <td>Leeds</td>
+        </tr>
+        <tr>
+          <td>Spurs</td>
+        </tr>
+        <tr>
+          <td>West Ham</td>
+        </tr>
+        <tr>
+          <td>Wolves</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="top" class="section hidden">
+        <h2>Top 5 individual goal scorers of the league</h2>
+        <table>
+          <tr>
+            <th>Player</th>
+            <th>Goals</th>
+          </tr>
+          <tr>
+            <td>Erling Haaland</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>Mohammed Salah</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>Jarrod Bowen</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>Ollie Watkins</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>Hueng Min Son</td>
+            <td>13</td>
+          </tr>
+          </table>
+          </div>
+
+          <div id="rat" class="section hidden">
+            <h2>Top 5 team ratings the league</h2>
+            <table>
+              <tr>
+                <th>Team name</th>
+                <th>Rating</th>
+              </tr>
+              <tr>
+                <td>Man City</td>
+                <td>7.27</td>
+              </tr>
+              <tr>
+                <td>Manchester United</td>
+                <td>7.16</td>
+              </tr>
+              <tr>
+                <td>Aston Villa</td>
+                <td>7.14</td>
+              </tr>
+              <tr>
+                <td>Brentford</td>
+                <td>7.04</td>
+              </tr>
+              <tr>
+                <td>Fulham</td>
+                <td>6.95</td>
+              </tr>
+              </table>
+              </div>
+
+              <div id="most" class="section hidden">
+                <h2>Top 5 most matches played by individual players</h2>
+                <table>
+                  <tr>
+                    <th>Player name</th>
+                    <th>Matches Played</th>
+                  </tr>
+                  <tr>
+                    <td>James Tarkowski</td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>Andre Onana</td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>Harry Maguire</td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>Ollie Watkins</td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>Domnic Solanke</td>
+                    <td>25</td>
+                  </tr>
+                  </table>
+                  </div>
+
+                  <div id="too" class="section hidden">
+                    <h2>Top 5 top rated players across the premier league season 23/24</h2>
+                    <table>
+                      <tr>
+                        <th>Player name</th>
+                        <th>Rating</th>
+                      </tr>
+                      <tr>
+                        <td>Martin Odegaard</td>
+                        <td>8.0</td>
+                      </tr>
+                      <tr>
+                        <td>Michael Olise</td>
+                        <td>7.77</td>
+                      </tr>
+                      <tr>
+                        <td>Mohammed Salah</td>
+                        <td>7.76</td>
+                      </tr>
+                      <tr>
+                        <td>Kevin De Bruyne</td>
+                        <td>7.66</td>
+                      </tr>
+                      <tr>
+                        <td>Bruno Fernandes</td>
+                        <td>7.54</td>
+                      </tr>
+                      </table>
+                      </div>
+
+                      <div id="poo" class="section hidden">
+                        <h2>23/23 Points table so far</h2>
+                        <table>
+                          <tr>
+                            <th>Position</th>
+                            <th>Team</th>
+                            <th>Points</th>
+                        
+                          </tr>
+                          <tr>
+                            <td> 1 </td>
+                            <td>Liverpool</td>
+                            <td>60</td>
+                          </tr>
+                          <tr>
+                            <td> 2 </td>
+                            <td>Man City</td>
+                            <td>59</td>
+                          </tr>
+                          <tr>
+                            <td> 3 </td>
+                            <td>Arenal</td>
+                        <td>58</td>  
+                        </tr>
+                          <tr>
+                            <td> 4 </td>
+                            <td>Aston Villa</td>
+                            <td>52</td>
+                          </tr>
+                          <tr>
+                            <td> 5 </td>
+                            <td>Spurs</td>
+                            <td>57</td>
+                          </tr>
+                          <tr>
+                            <td> 6 </td>
+                            <td>Manchester United</td>
+                            <td>44</td>
+                          </tr>
+                          <tr>
+                            <td> 7 </td>
+                            <td>Brighton</td>
+                            <td>39</td>
+                          </tr>
+                          <tr>
+                            <td> 8 </td>
+                            <td>West Ham</td>
+                            <td>39</td>
+                          </tr>
+                          <tr>
+                            <td> 9 </td>
+                            <td>Wolves</td>
+                            <td>38</td>
+                          </tr>
+                          <tr>
+                            <td> 10 </td>
+                            <td>Newcastle</td>
+                            <td>37</td>
+                          </tr>
+                          <tr>
+                            <td> 11 </td>
+                            <td>Chelsea</td>
+                            <td>35</td>
+                          </tr>
+                          <tr>
+                            <td> 12 </td>
+                            <td>Fulham</td>
+                            <td>32</td>
+                          </tr>
+                          <tr>
+                            <td> 13 </td>
+                            <td>Crystal palace</td>
+                            <td>28</td>
+                          </tr>
+                          <tr>
+                            <td> 14 </td>
+                            <td>Bournemouth</td>
+                            <td>28</td>
+                          </tr>
+                          <tr>
+                            <td> 15 </td>
+                            <td>Brentford</td>
+                            <td>25</td>
+                          </tr>
+                          <tr>
+                            <td> 16 </td>
+                            <td>Everton*</td>
+                            <td>25</td>
+                          </tr>
+                          <tr>
+                            <td> 17 </td>
+                            <td>Forrest</td>
+                            <td>24</td>
+                          </tr>
+                          <tr>
+                            <td> 18 </td>
+                            <td>Luton Town</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td> 19 </td>
+                            <td>Burnley</td>
+                            <td>13</td>
+                          </tr>
+                          <tr>
+                            <td> 20 </td>
+                            <td>Leeds United</td>
+                            <td>13</td>
+                          </tr>
+                        </table>
+                      </div>
+    
+                      <div id="top1" class="section hidden">
+                        <h2>Top rated individual players in each Team</h2>
+                        <table>
+                          <tr>
+                            <th> Team</th>
+                            <th>Player</th>
+                            <th>Rating</th>
+                          </tr>
+                          <tr>
+                            <td>Arsenal</td>
+                            <td>Martin Odegaard</td>
+                            <td>8.0</td>
+                          </tr>
+                          <tr>
+                            <td>Aston Villa</td>
+                            <td>Ollie Watkins</td>
+                            <td>7.37</td>
+                          </tr>
+                          <tr>
+                            <td>Bournemouth</td>
+                            <td>Neto</td>
+                            <td>7.1</td>
+                          </tr>
+                          <tr>
+                            <td>Brentford</td>
+                            <td>Bryan Mbeumo</td>
+                            <td>7.39</td>
+                          </tr>
+                          <tr>
+                            <td>Brighton</td>
+                            <td>Solly March</td>
+                            <td>7.37</td>
+                          </tr>
+                          <tr>
+                            <td>Burnley</td>
+                            <td>James Trafford</td>
+                            <td>7.07</td>
+                          </tr>
+                          <tr>
+                            <td>Chelsea</td>
+                            <td>Robert Sanchez</td>
+                            <td>7.11</td>
+                          </tr>
+                          <tr>
+                            <td>Crytal Palace</td>
+                            <td>Michael Olise</td>
+                            <td>7.76</td>
+                          </tr>
+                          <tr>
+                            <td>Everton</td>
+                            <td>James Tarkowski</td>
+                            <td>7.37</td>
+                          </tr>
+                          <tr>
+                            <td>Fulham</td>
+                            <td>Joao Palhinha</td>
+                            <td>7.15</td>
+                          </tr>
+                          <tr>
+                            <td>Liverpool</td>
+                            <td>Ross Barkley</td>
+                            <td>7.34</td>
+                          </tr>
+                          <tr>
+                            <td>Luton Town</td>
+                            <td>Mohammed Salah</td>
+                            <td>7.77</td>
+                          </tr>
+                          <tr>
+                            <td>Man City</td>
+                            <td>Kevin De Bruyne</td>
+                            <td>7.66</td>
+                          </tr>
+                          <tr>
+                            <td>Manchester United</td>
+                            <td>Bruno Fernandes</td>
+                            <td>7.54</td>
+                          </tr>
+                          <tr>
+                            <td>Newcastle</td>
+                            <td>Kieren Trippier</td>
+                            <td>7.38</td>
+                          </tr>
+                          <tr>
+                            <td>Forrest</td>
+                            <td>Callum Hudson Odoi</td>
+                            <td>7.7.01</td>
+                          </tr>
+                          <tr>
+                            <td>Leeds United</td>
+                            <td>Daniel James</td>
+                            <td>7.32</td>
+                          </tr>
+                          <tr>
+                            <td>Spurs</td>
+                            <td>James Maddison</td>
+                            <td>7.84</td>
+                          </tr>
+                          <tr>
+                            <td>West Ham</td>
+                            <td>James Ward Prowse</td>
+                            <td>7.42</td>
+                          </tr>
+                          <tr>
+                            <td>Wolves</td>
+                            <td>Matheus Cunha</td>
+                            <td>7.34</td>
+                          </tr>
+                          </table>
+                          </div>
+    <!-- Other sections -->
+
+ 
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.add('hidden');
+      });
+
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
